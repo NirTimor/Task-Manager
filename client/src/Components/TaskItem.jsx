@@ -9,7 +9,7 @@ const TaskItem = ({ task, onDelete }) => {
       <p>Priority: {task.priority}</p>
       <p>Status: {task.is_completed ? 'Completed' : 'Pending'}</p>
       <button onClick={() => onDelete(task.id)}>Delete</button>
-      {/* You can add more buttons here for editing or marking as completed */}
+      {}
     </li>
   );
 };

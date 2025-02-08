@@ -9,7 +9,7 @@ const AddTaskPage = () => {
   const handleTaskAdded = async (newTask) => {
     try {
       const response = await addTask(newTask);
-      console.log("Task added response:", response); 
+      console.log("Task added response:", response);
       alert("Task added successfully!");
     } catch (error) {
       console.error("Error adding task:", error.response?.data || error.message);

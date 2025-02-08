@@ -177,6 +177,7 @@ html {
 .delete-task-btn:hover {
   background-color: darkred;
 }
+
 .edit-task-btn {
   background-color: grey;
   color: white;
@@ -191,7 +192,6 @@ html {
   background-color: darkgrey;
 }
 
-/* Modal Styling */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -250,21 +250,20 @@ html {
   background-color: red;
   color: white;
 }
-/* Modal Overlay */
+
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(44, 51, 109, 0.5); /* Semi-transparent dark background */
+  background-color: rgba(44, 51, 109, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fff;
   padding: 20px;
@@ -275,7 +274,6 @@ html {
   animation: fadeIn 0.3s ease-out;
 }
 
-/* Input Fields */
 .modal-content input,
 .modal-content textarea,
 .modal-content select {
@@ -287,7 +285,6 @@ html {
   font-size: 16px;
 }
 
-/* Buttons */
 .modal-buttons button {
   background-color: #007bff;
   color: white;
@@ -302,16 +299,16 @@ html {
   background-color: #0056b3;
 }
 
-.modal-buttons button + button {
+.modal-buttons button+button {
   margin-left: 10px;
 }
 
-/* Animation for smooth modal appearance */
 @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
