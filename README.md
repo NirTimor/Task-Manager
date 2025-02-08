@@ -1,9 +1,9 @@
 # Task Manager 📝🚀
 
-A full-stack **Task Manager** application built with:
+full-stack **Task Manager** application built with:
 
 - **Frontend:** React.js  
-- **Backend:** FastAPI (Python), Bootstrap  
+- **Backend:** FastAPI (Python)  
 - **Database:** MongoDB  
 
 ## Features  
