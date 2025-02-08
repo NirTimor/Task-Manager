@@ -1,0 +1,23 @@
+.add-task form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .add-task input,
+  .add-task textarea,
+  .add-task select,
+  .add-task button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-task button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

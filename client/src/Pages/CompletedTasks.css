@@ -1,0 +1,130 @@
+/* Global container styling */
+.completed-tasks-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f5ff);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  color: #2b2b2b;
+}
+
+/* Title styling */
+.completed-tasks-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #4f46e5, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Loading and no tasks messages */
+.loading,
+.no-tasks {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #64748b;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Task list styling */
+.completed-tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Task card styling */
+.completed-task-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.completed-task-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Task title styling */
+.completed-task-item h3 {
+  font-size: 1.5rem;
+  color: #334155;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Task description */
+.completed-task-item p {
+  font-size: 1rem;
+  color: #475569;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* Task date */
+.task-date {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .completed-tasks-container {
+    padding: 15px;
+  }
+
+  .completed-task-item {
+    padding: 15px;
+  }
+
+  .completed-task-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .completed-task-item p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Decorative elements */
+.completed-tasks-container:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #93c5fd, #a78bfa);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.completed-tasks-container:after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #6ee7b7, #93c5fd);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+}

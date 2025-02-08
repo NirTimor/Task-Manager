@@ -1,0 +1,27 @@
+
+.custom-navbar {
+    background-color: #007bff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+  }
+  .custom-navbar .navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important;
+    text-align: left;
+    margin-left: 0; /* Ensures no extra margin is applied */
+    flex-grow: 1; /* Makes the brand take up available space, pushing other items to the right */
+  }
+  
+  .custom-navbar .nav-link {
+    color: #ffffff !important;
+    margin-left: 1rem;
+  }
+  
+  .custom-navbar .nav-link:hover {
+    color: #ffdd57 !important; 
+  }
+  
+  .custom-navbar .nav-link:active {
+    color: #ffc107 !important;
+  }
+  
