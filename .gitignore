@@ -1,0 +1,13 @@
+# Ignore dependencies
+node_modules/
+venv/
+__pycache__/
+.env
+
+# Ignore build files
+client/build/
+client/.next/
+
+# Ignore editor settings
+.vscode/
+.idea/
