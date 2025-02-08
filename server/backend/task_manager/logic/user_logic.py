@@ -1,7 +1,5 @@
 from http.client import HTTPException
-
 from bson import ObjectId
-
 from task_manager.models.UserModel import *
 from task_manager.database.database import *
 

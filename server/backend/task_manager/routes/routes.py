@@ -2,7 +2,6 @@ from fastapi import APIRouter
 from task_manager.logic.task_logic import *
 from task_manager.logic.user_logic import *
 from fastapi import HTTPException, Request, status
-
 router = APIRouter()
 
 
@@ -10,7 +9,6 @@ router = APIRouter()
 @router.post("/register/")
 async def register_user(user: UserModel):
     user_id = create_user(user)
-
     if user_id:
         return {"message": "User registered successfully!", "user_id": str(user_id)}
     else:
@@ -23,9 +21,7 @@ async def login_user(request: Request):
     data = await request.json()
     email = data.get('email')
     password = data.get('password')
-
     user_info = authenticate_user(email, password)
-
     if user_info:
         return {"message": "Successfully Logged in!", "user_id": user_info["user_id"]}
     else:
@@ -69,7 +65,6 @@ async def update_task(task_id: str, task: TaskModel):
         task_id_obj = ObjectId(task_id)
     except Exception:
         raise HTTPException(status_code=400, detail="Invalid task ID format.")
-
     updated_task = update_task_by_id(task_id_obj, task)
 
     if updated_task:
@@ -100,7 +95,6 @@ async def delete_task(task_id: str):
 @router.get("/tasks/")
 async def get_tasks(user_id: str, is_completed: bool = None):
     filter_query = {"user_id": user_id}
-
     if is_completed is not None:
         filter_query["is_completed"] = is_completed
 
@@ -113,14 +107,13 @@ async def get_tasks(user_id: str, is_completed: bool = None):
     return {"tasks": tasks_list}
 
 
-# Marking a Task as completed
+# Marking Task as completed
 @router.patch("/tasks/complete")
 async def mark_task_as_complete(task_id: str):
     try:
         task_id_obj = ObjectId(task_id)
     except Exception:
         raise HTTPException(status_code=400, detail="Invalid task ID format.")
-
     updated_task = await mark_task_complete_logic(task_id_obj)
 
     if updated_task:

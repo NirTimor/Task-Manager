@@ -1,5 +1,4 @@
 from http.client import HTTPException
-from bson import ObjectId
 from pymongo import ReturnDocument
 from task_manager.database.database import *
 from task_manager.models.TaskModel import *
@@ -25,9 +24,9 @@ def get_task_by_id(task_id):
 
 
 def get_tasks_by_user_id(user_id: str):
-    print(f"Fetching tasks for user_id: {user_id}")  # Debugging line
+    print(f"Fetching tasks for user_id: {user_id}")
     tasks = list(tasks_collection.find({"user_id": user_id}))
-    print(f"Found tasks: {tasks}")  # Debugging line
+    print(f"Found tasks: {tasks}")
     return tasks
 
 
@@ -86,14 +85,14 @@ def serialize_task(task):
 
 
 async def mark_task_complete_logic(task_id_obj):
-    task = await tasks_collection.find_one({"_id": task_id_obj})  # Check if task exists
+    task = await tasks_collection.find_one({"_id": task_id_obj})
     if not task:
-        return None  # Task not found
+        return None
 
     await tasks_collection.update_one({"_id": task_id_obj}, {"$set": {"is_completed": True}})
 
     updated_task = await tasks_collection.find_one({"_id": task_id_obj})
-    return updated_task  # Return the updated task
+    return updated_task
 
 
 
